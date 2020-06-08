@@ -1,17 +1,16 @@
-.search_table_root .rt-thead .-header {
+:global(.rt-thead.-header) {
   box-shadow: none !important;
   border-bottom: 1px solid #eee;
   background: #f5f5f5;
   height: 40px;
-  border: 2px solid orange;
   /* font-family: Raleway; */
 }
 
-.search_table_root .rt-tr-group {
+:global(.rt-tr-group) {
   height: 40px;
 }
 
-.search_table_root .rt-thead .rt-resizable-header-content {
+:global(.rt-thead .rt-resizable-header-content) {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 14px;
@@ -19,49 +18,49 @@
   margin-top: 4px;
 }
 
-.search_table_root .rt-tbody .rt-td {
+:global(.rt-tbody .rt-td) {
   border-right: 1px solid #eee !important;
   font-size: 14px;
   line-height: 20px;
   /* font-family: Raleway; */
 }
 
-.search_table_root .rt-resizer {
+:global(.rt-resizer) {
   display: none !important;
 }
 
-.search_table_root .-pagination {
+:global(.-pagination) {
   box-shadow: none !important;
   border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
-.search_table_root .-pagination .-btn {
+:global(.-pagination .-btn) {
   font-size: 14px !important;
   /* font-family: Raleway; */
 }
 
-.search_table_root .-pagination .-btn:not([disabled]):hover {
+:global(.-pagination .-btn:not([disabled]):hover) {
   background: #999 !important;
   color: #fff;
 }
 
-.search_table_root .-pagination .-pageInfo {
+:global(.-pagination .-pageInfo) {
   font-size: 14px !important;
   /* font-family: Raleway; */
 }
 
-.search_table_root .-pagination select {
+:global(.-pagination select) {
   border-radius: 0px !important;
 }
 
-.search_table_root .ReactTable .rt-thead .rt-tr {
+:global(.ReactTable .rt-thead .rt-tr) {
   text-align: left;
 }
 
-.search_table_root .ReactTable .rt-td {
+:global(.ReactTable .rt-td) {
   padding: 6px 5px;
 }
 
-.search_table_root .ReactTable .rt-tbody {
+:global(.ReactTable .rt-tbody) {
   overflow: hidden;
 }

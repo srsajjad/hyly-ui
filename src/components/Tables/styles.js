@@ -55,5 +55,23 @@ export const styles = (theme) => ({
     }
   },
 
+  custom_arrow_up: {
+    border: 'solid black',
+    borderWidth: '0 1.7px 1.7px 0',
+    display: 'inline-block',
+    padding: '1.7px',
+    transform: `rotate(-135deg)`,
+    marginLeft: '5px'
+  },
+
+  custom_arrow_down: {
+    border: 'solid black',
+    borderWidth: '0 1.7px 1.7px 0',
+    display: 'inline-block',
+    padding: '1.7px',
+    transform: `rotate(45deg)`,
+    marginLeft: '5px'
+  },
+
   pagination: {}
 })

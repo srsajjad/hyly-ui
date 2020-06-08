@@ -59,6 +59,7 @@
   ],
   "dependencies": {
     "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
     "hyly-ui": "./",
     "react-table": "6.8.2"
   }

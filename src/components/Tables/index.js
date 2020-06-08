@@ -1,27 +1,29 @@
 import React, { useState } from 'react'
 import ReactTable from 'react-table'
-import { withStyles } from '@material-ui/core'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown'
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp'
 
 import { useDebounce } from './useDebounce'
 import { useUpdateTable } from './useUpdateTable'
 
+import { withStyles } from '@material-ui/core'
 import { styles } from './styles'
-import 'react-table/react-table.css'
 import style from './index.css'
+import 'react-table/react-table.css'
 
 let Table = (props) => {
   const { classes, data } = props
 
   // hooks
   const [inputVal, setInputVal] = useState('')
-  const debouncedVal = useDebounce(inputVal, 150)
+  const debouncedVal = useDebounce(inputVal, 100)
   const tableData = useUpdateTable(debouncedVal, data)
 
   // up down arrow component - sort icons
   const UpDownSort = (props) => (
     <div className={classes.arrows}>
-      <i className={`${classes.arrowSize}` + ' icon icon-triangle-up'} />
-      <i className={`${classes.arrowSize}` + ' icon icon-triangle-down'} />
+      <i className={classes.custom_arrow_up}></i>
+      <i className={classes.custom_arrow_down}></i>
     </div>
   )
 
@@ -37,7 +39,6 @@ let Table = (props) => {
               className={classes.input}
               placeholder='Search please'
             />
-            <UpDownSort />
           </div>
         )
       },
@@ -131,7 +132,6 @@ let Table = (props) => {
       data={tableData}
       pageSize={10}
       showPagination={false}
-      // sortable={false}
     />
   )
 }
