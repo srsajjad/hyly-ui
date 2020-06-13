@@ -1,6 +1,6 @@
 import React from 'react'
-import { Counter } from 'hyly-ui'
-import 'hyly-ui/dist/index.css'
+import { Counter } from 'hyly-ui-local'
+import 'hyly-ui-local/dist/index.css'
 
 export default {
   title: 'Counter',

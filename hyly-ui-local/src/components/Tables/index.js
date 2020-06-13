@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import ReactTable from 'react-table'
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown'
-import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp'
 
 import { useDebounce } from './useDebounce'
 import { useUpdateTable } from './useUpdateTable'
@@ -77,6 +75,7 @@ let Table = (props) => {
       Cell: (props) => <div>{props.value}</div>,
       minWidth: 100
     },
+
     {
       Header: () => (
         <div className={classes.header}>
@@ -88,6 +87,7 @@ let Table = (props) => {
       Cell: (props) => <div>{props.value}</div>,
       minWidth: 100
     },
+
     {
       Header: () => (
         <div className={classes.header}>
@@ -99,6 +99,7 @@ let Table = (props) => {
       Cell: (props) => <div>{props.value}</div>,
       minWidth: 100
     },
+
     {
       Header: () => (
         <div className={classes.header}>
@@ -110,6 +111,7 @@ let Table = (props) => {
       Cell: (props) => <div>{props.value}</div>,
       minWidth: 100
     },
+
     {
       Header: () => (
         <div className={classes.header}>

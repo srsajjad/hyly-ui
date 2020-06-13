@@ -8,7 +8,7 @@ export const Counter = (props) => {
 
   const useStyles = makeStyles({
     btn: {
-      border: '3px solid pink'
+      border: '3px solid red'
     }
   })
 
