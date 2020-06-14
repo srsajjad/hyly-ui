@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import ReactTable from 'react-table'
 
+import useAutocomplete from '@material-ui/lab/useAutocomplete'
 import { useDebounce } from './useDebounce'
-import { useUpdateTable } from './useUpdateTable'
+import { useDebounceHandler } from './useDebounceHandler'
 
 import { withStyles } from '@material-ui/core'
 import { styles } from './styles'
@@ -10,12 +11,21 @@ import style from './index.css'
 import 'react-table/react-table.css'
 
 let Table = (props) => {
-  const { classes, data } = props
+  const { classes, data, debounceDelay = 150, handleChange, ...others } = props
 
-  // hooks
-  const [inputVal, setInputVal] = useState('')
-  const debouncedVal = useDebounce(inputVal, 100)
-  const tableData = useUpdateTable(debouncedVal, data)
+  //  hooks
+  const { getInputProps, groupedOptions, value, inputValue } = useAutocomplete({
+    id: 'use-autocomplete-mui',
+    defaultValue: data,
+    multiple: true,
+    options: data,
+    getOptionLabel: (option) => option[1]
+  })
+
+  const debouncedValue = useDebounce(inputValue, debounceDelay)
+  useDebounceHandler(handleChange, debouncedValue)
+
+  const tableData = !inputValue ? value : groupedOptions
 
   // up down arrow component - sort icons
   const UpDownSort = (props) => (
@@ -32,10 +42,9 @@ let Table = (props) => {
         return (
           <div className={classes.header}>
             <input
-              value={inputVal}
-              onChange={(e) => setInputVal(e.target.value)}
               className={classes.input}
               placeholder='Search please'
+              {...getInputProps()}
             />
           </div>
         )
@@ -134,6 +143,7 @@ let Table = (props) => {
       data={tableData}
       pageSize={10}
       showPagination={false}
+      {...others}
     />
   )
 }

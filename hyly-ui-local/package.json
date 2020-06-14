@@ -1,5 +1,5 @@
 {
-  "name": "hyly-ui",
+  "name": "hyly-ui-local",
   "version": "1.0.7",
   "description": "A component kit for hyly ui components",
   "author": "srsajjad",
@@ -53,6 +53,7 @@
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "latest",
     "react-table": "6.8.2"
   }
 }

@@ -1,13 +1,12 @@
-import { Table } from './'
-// import withTheme from 'components/Theme/app_theme'
-
-// const SearchableTable = withTheme(Table)
-// export { SearchableTable }
-
 import React from 'react'
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import {
+  ThemeProvider as MuiThemeProvider,
+  createMuiTheme
+} from '@material-ui/core/styles'
+
+import { Table } from './'
+// import { withRoot } from 'themes/app_theme'
 
 const white = {
   main: 'rgba(255,255,255,1)',
@@ -363,8 +362,4 @@ function withRoot(Component) {
   return WithRoot
 }
 
-// export default withRoot
-
-let SearchableTable = withRoot(Table)
-
-export { SearchableTable }
+export const SearchableTable = withRoot(Table)

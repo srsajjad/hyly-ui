@@ -2,7 +2,7 @@
   "name": "example",
   "version": "1.0.0",
   "devDependencies": {
-    "hyly-ui-local": "1.0.6",
+    "hyly-ui-local": "1.0.7",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-knobs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",

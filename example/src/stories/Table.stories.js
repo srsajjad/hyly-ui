@@ -26,6 +26,9 @@ storiesOf('Just a Table', module).add('Just A Table', () => (
 
 storiesOf('Searchable Table', module).add('SearchableTable', () => (
   <div style={{ padding: 30 }}>
-    <SearchableTable data={data} />
+    <SearchableTable
+      handleChange={(val) => console.log('input value', val)}
+      data={data}
+    />
   </div>
 ))

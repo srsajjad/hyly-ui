@@ -344,7 +344,7 @@ export const theme = createMuiTheme({
   }
 })
 
-function withRoot(Component) {
+export const withRoot = (Component) => {
   function WithRoot(props) {
     return (
       <MuiThemeProvider theme={theme}>
@@ -356,5 +356,3 @@ function withRoot(Component) {
 
   return WithRoot
 }
-
-export default withRoot
